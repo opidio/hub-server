@@ -57,7 +57,7 @@ def list_videos(page=1):
     """
     A paginated listing of all videos
     """
-    pagination = Video.query.paginate(page, error_out=False)
+    pagination = Video.query.paginate(page, 5, error_out=False)
 
     # Base response will always be used as the base, even if
     # the request fails
